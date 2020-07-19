@@ -8,7 +8,7 @@ import { ListButtonsTypes } from "./types";
 
 const ListButtons: React.FC<ListButtonsTypes> = ({ listButtons, handlePress }) => {
   return (
-    <View style={styles.buttons}>
+    <View>
       {listButtons.map((buttonArray, key) =>
         <Row key={key}>
           {buttonArray.map((button, index) =>
@@ -24,11 +24,5 @@ const ListButtons: React.FC<ListButtonsTypes> = ({ listButtons, handlePress }) =
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  buttons: {
-    flex: 10,
-  }
-});
 
 export default ListButtons;

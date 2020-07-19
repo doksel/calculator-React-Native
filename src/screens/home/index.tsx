@@ -33,8 +33,10 @@ const Home: React.FC = () => {
       <View style={styles.calculation}>
         <Text style={styles.text}>{result}</Text>
       </View>
+      <View style={styles.buttons}>
 
-      <ListButtons listButtons={listButtons} handlePress={handlePress} />
+        <ListButtons listButtons={listButtons} handlePress={handlePress} />
+      </View>
     </View >
   );
 };
@@ -50,6 +52,9 @@ const styles = StyleSheet.create({
   calculation: {
     flex: 1,
     alignItems: "flex-end",
+  },
+  buttons: {
+    flex: 8,
   },
   text: {
     color: "#fff",
